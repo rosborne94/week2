@@ -30,4 +30,4 @@ function count(num){
 }
 
 count(10);
-count(10000);
+count(100);
