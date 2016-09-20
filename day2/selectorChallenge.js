@@ -7,6 +7,7 @@ $("h3").css('color', 'red');
 });
 
 $(document).ready(function(){
+    //read the instructions wrong
 $("li").css('background-color', 'yellow');
 });
 
