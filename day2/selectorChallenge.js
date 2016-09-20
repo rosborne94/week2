@@ -12,3 +12,4 @@ $("li").css('background-color', 'yellow');
 });
 
 //found out I was missing the $(document).ready part I searched online and nothing had it and I finally found it
+//$(function()) is easier.
