@@ -1,5 +1,6 @@
 //Create variable to hold the answer
 var answer;
+var guess = $("#txbGuess").val();
 
 //Setup the game
 function setupGame(){
@@ -16,7 +17,6 @@ function setupGame(){
 
 //Handle the guess
 function handleGuess(){
-    var guess = $("#txbGuess").val();
     if(+guess == answer){
         //Tell them the answer is right
         $("#message").text("You're right!");
@@ -37,12 +37,24 @@ function playGame (){
     $("#txbGuess").focus();
 
 }
+function reload () {
+    location.reload();
+}
+
+function win (){
+    if(+guess == answer) {
+        location.reload();
+    }
+}
+
 
 //When the page loads, setup the game
 $(function(){
     //Wire up the event handlers
     $("#startGame").on("click", playGame);
     $("#btnGuess").on("click", handleGuess);
+    $('#btnRestart').on("click", reload);
+    $('#btnQuit').on("click", win);
     //start game
     setupGame();
 });
